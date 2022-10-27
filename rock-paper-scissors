@@ -1,0 +1,50 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+players_move=int(input("What do you choose? Type 0 for rock, 1 for paper and 2 for scissors. "))
+print("Your Move: \n")
+if players_move==0:
+  print(rock)
+elif players_move==1:
+  print(paper)
+else:
+  print(scissors)
+print("Computer's Move: \n")
+computers_moves=[rock,paper,scissors]
+computers_move=random.choice(computers_moves)
+print(f"{computers_move} \n\n\n")
+if (players_move==0 and computers_move==paper) or (players_move==1 and computers_move==scissors) or (players_move==2 and computers_move==rock) :
+  print("You lose")
+elif (players_move==0 and computers_move==rock) or (players_move==1 and computers_move==paper) or(players_move==2 and computers_move==scissors):
+  print("It is a draw")
+else: 
+  print("you win")
+
+
+
