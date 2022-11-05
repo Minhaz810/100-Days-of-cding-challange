@@ -17,3 +17,6 @@ def jump():
 while at_goal()!=True:
     jump()
  
+#another way
+while not at_goal():
+    jump()
